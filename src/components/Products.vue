@@ -1,0 +1,68 @@
+<template>
+  <div>
+    <div class="row d-flex mb-3 align-items-center" :key="item.id" v-for="item in data.products">
+    <div class="col-sm-4">
+      <img class="img-fluid d-block" :src="item.image" :alt="item.name">
+    </div>
+    <div class="col">
+      <h3 class="text-info">{{ item.name }}</h3>
+      <p class="mb-0">{{ item.description }}</p>
+      <div class="h5 float-right">${{item.price}}</div>     
+    </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Products',
+  data() {
+    return {
+        data : {
+          products :[
+          {
+            "id": "532",
+            "name": "Slicker Jacket",
+            "description": "Wind and rain are no match for our organic bamboo slicker jacket for men and women. Triple stitched seams, zippered pockets, and a stay-tight hood are just a few features of our best-selling jacket.",
+            "price": "125",
+            "image_title": "slicker-jacket_lynda_29941",
+            "image": "https://hplussport.com/wp-content/uploads/2016/12/slicker-jacket_LYNDA_29941.jpg"
+          },
+          {
+            "id": "530",
+            "name": "Bamboo Thermal Ski Coat",
+            "description": "You'll be the most environmentally conscious skier on the slopes - and the most stylish - wearing our fitted bamboo thermal ski coat, made from organic bamboo with recycled plastic down filling.",
+            "price": "99",
+            "image": "https://hplussport.com/wp-content/uploads/2016/12/ski-coat_LYNDA_29940.jpg"
+          },
+          {
+            "id": "516",
+            "name": "Unisex Thermal Vest",
+            "description": "Our thermal vest, made from organic bamboo with recycled plastic down filling, is a favorite of both men and women. You'll help the environment, and have a wear-easy piece for many occasions.",
+            "price": "95",
+            "image": "https://hplussport.com/wp-content/uploads/2016/12/unisex-thermal-vest_LYNDA_29944.jpg"
+          }
+        ] 
+     }    
+    }
+  },
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
